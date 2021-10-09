@@ -1,22 +1,15 @@
 import React from 'react';
 import Header from './components/Header';
+import InputNote from './components/InputNote';
 import Note from './components/Note';
 import Footer from './components/Footer';
 import notes from './notes';
-
-const createCard = (note, index) => {
-    return(
-        <Note 
-            key={index}
-            {...notes[index]}
-        />
-    );
-}
 
 const App = () => {
     return(
         <div>
             <Header />
+            <InputNote />
             {notes.map((note, index) => 
                     <Note 
                         key={index}
