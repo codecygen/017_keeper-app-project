@@ -1,22 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const InputNote = () => {
+
+    const [ inputData, setInputData ] = useState({
+        inputAreaText: '',
+        textAreaText: ''
+    });
+
+    const typeNoteFunc = (e) => {
+        // Input name and input value for title typing
+        const { name, value } = e.target;
+
+        name === 'inputArea' ? 
+            setInputData({...inputData, inputAreaText: value}) :
+            setInputData({...inputData, textAreaText: value});
+        // setInputData(value);
+
+        // alert(name);
+    }
+
     return(
+
         <section id="note-input">
-            <form /*onSubmit={}*/>
+            <form /*onSubmit={addNote}*/>
+                <p>{inputData.inputAreaText}</p>
+                <p>{inputData.textAreaText}</p>
                 <input 
                     type="text" 
-                    name="title" 
+                    name="inputArea" 
                     placeholder="Title" 
-                    /*onChange={}*/ 
+                    onChange={typeNoteFunc} 
                     /*value={}*/ 
                 />
 
                 <textarea 
                     type="text" 
-                    name="title" 
+                    name="textArea" 
                     placeholder="Take a note..." 
-                    /*onChange={}*/ 
+                    onChange={typeNoteFunc} 
                     /*value={}*/
                 />
                 <div className="btn-container">
@@ -24,8 +45,6 @@ const InputNote = () => {
                 </div>
                 
             </form>
-            {/* <h1>Hi</h1>
-            <p>How are you?</p> */}
         </section>
     );
 }
