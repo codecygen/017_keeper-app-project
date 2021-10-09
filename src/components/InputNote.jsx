@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InputNote = () => {
+const InputNote = (props) => {
 
     const [ inputData, setInputData ] = useState({
         inputAreaText: '',
@@ -19,7 +19,16 @@ const InputNote = () => {
     return(
 
         <section id="note-input">
-            <form /*onSubmit={addNote}*/>
+            <form onSubmit={(e) => {
+                // This prevents submit button from refreshing
+                // webpage.
+                e.preventDefault();
+                props.handleClick(inputData);
+                setInputData({
+                    inputAreaText: '',
+                    textAreaText: ''
+                });
+            }}>
                 <p>{inputData.inputAreaText}</p>
                 <p>{inputData.textAreaText}</p>
                 <input 
