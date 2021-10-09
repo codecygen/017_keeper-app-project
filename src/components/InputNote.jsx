@@ -11,14 +11,16 @@ const InputNote = () => {
                     /*onChange={}*/ 
                     /*value={}*/ 
                 />
-                <input 
+
+                <textarea 
                     type="text" 
                     name="title" 
                     placeholder="Take a note..." 
                     /*onChange={}*/ 
-                    /*value={}*/ 
+                    /*value={}*/
                 />
-                <button type="submit">Submit</button>
+
+                <button type="submit">Submit Note</button>
             </form>
             {/* <h1>Hi</h1>
             <p>How are you?</p> */}

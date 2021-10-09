@@ -38,7 +38,28 @@ footer p {
 }
 
 input {
+  word-wrap: break-word;
+  word-break: break-all;
   border: 0;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 1.25rem;
+  overflow-wrap: break-word;
+}
+
+textarea {
+  padding: 0 0 5rem 0;
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 0;
+  font-size: 1.25rem;
+}
+
+::placeholder {
+  font-size: 1.25rem;
 }
 
 #note-input {
@@ -46,7 +67,7 @@ input {
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
+  width: 25%;
   margin: 16px auto;
 }
 
@@ -70,4 +91,42 @@ input {
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:1.4rem;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 2rem;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
