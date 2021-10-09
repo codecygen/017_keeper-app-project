@@ -19,8 +19,10 @@ const InputNote = () => {
                     /*onChange={}*/ 
                     /*value={}*/
                 />
-
-                <button type="submit">Submit Note</button>
+                <div className="btn-container">
+                    <button type="submit">Submit Note</button>
+                </div>
+                
             </form>
             {/* <h1>Hi</h1>
             <p>How are you?</p> */}
