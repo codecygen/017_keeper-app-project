@@ -14,9 +14,6 @@ const InputNote = () => {
         name === 'inputArea' ? 
             setInputData({...inputData, inputAreaText: value}) :
             setInputData({...inputData, textAreaText: value});
-        // setInputData(value);
-
-        // alert(name);
     }
 
     return(
@@ -30,7 +27,7 @@ const InputNote = () => {
                     name="inputArea" 
                     placeholder="Title" 
                     onChange={typeNoteFunc} 
-                    /*value={}*/ 
+                    value={inputData.inputAreaText} 
                 />
 
                 <textarea 
@@ -38,7 +35,7 @@ const InputNote = () => {
                     name="textArea" 
                     placeholder="Take a note..." 
                     onChange={typeNoteFunc} 
-                    /*value={}*/
+                    value={inputData.textAreaText}
                 />
                 <div className="btn-container">
                     <button type="submit">Submit Note</button>
