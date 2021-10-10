@@ -6,17 +6,15 @@ import Footer from './components/Footer';
 import notes from './notes';
 
 const App = () => {
-    const [ submittedInput, setSubmittedInput ] = useState({
-        inputAreaText: '',
-        textAreaText: ''
-    });
+
+    const [ submittedInput, setSubmittedInput ] = useState([]);
 
     const handleClick = (inputData) => {
-        setSubmittedInput({
+
+        setSubmittedInput([
             ...submittedInput,
-            inputAreaText: inputData.inputAreaText, 
-            textAreaText: inputData.textAreaText
-        });
+            inputData
+        ]);
     }
 
 
@@ -26,12 +24,21 @@ const App = () => {
             <InputNote 
                 handleClick={handleClick}
             />
-            {notes.map((note, index) => 
+            {/* {notes.map((note, index) => 
                     <Note 
                         key={index}
                         {...notes[index]}
                     />
+            )} */}
+
+            {submittedInput.map((eachNote, index) => 
+                    <Note 
+                        key={index}
+                        id={index}
+                        {...submittedInput[index]}
+                    />
             )}
+
             {/* 
             <Note {...notes[0]} />
             <Note {...notes[1]} />

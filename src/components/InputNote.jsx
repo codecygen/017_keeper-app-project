@@ -29,8 +29,6 @@ const InputNote = (props) => {
                     textAreaText: ''
                 });
             }}>
-                <p>{inputData.inputAreaText}</p>
-                <p>{inputData.textAreaText}</p>
                 <input 
                     type="text" 
                     name="inputArea" 
