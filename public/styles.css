@@ -98,7 +98,7 @@ textarea {
   height: 50px;
 }
 
-button{
+button {
   position: absolute;
   right: 20px;
   background:#1AAB8A;
@@ -110,11 +110,13 @@ button{
   transition:800ms ease all;
   outline:none;
 }
-button:hover{
+
+button:hover {
   background:#fff;
   color:#1AAB8A;
 }
-button:before,button:after{
+
+button:before, button:after {
   content:'';
   position:absolute;
   top:0;
@@ -124,13 +126,29 @@ button:before,button:after{
   background: #1AAB8A;
   transition:400ms ease all;
 }
-button:after{
+
+button:after {
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-button:hover:before,button:hover:after{
+
+button:hover:before,button:hover:after {
   width:100%;
   transition:800ms ease all;
+}
+
+.delete-btn {
+  background:#ab1f1a;
+  color:#fff;
+}
+
+.delete-btn:hover {
+  background:#fff;
+  color:#ab1f1a;
+}
+
+.delete-btn:before, .delete-btn:after {
+  background: #ab1f1a;
 }

@@ -3,7 +3,8 @@ import Header from './components/Header';
 import InputNote from './components/InputNote';
 import Note from './components/Note';
 import Footer from './components/Footer';
-import notes from './notes';
+// Notes not used anymore
+// import notes from './notes';
 
 const App = () => {
 
@@ -15,6 +16,14 @@ const App = () => {
             ...submittedInput,
             inputData
         ]);
+    }
+
+    const deleteNote = (noteIndex) => {
+        setSubmittedInput(allNotes => {
+            return allNotes.filter((eacNote, index) => {
+                return index !== noteIndex;
+            });
+        });
     }
 
 
@@ -35,6 +44,7 @@ const App = () => {
                     <Note 
                         key={index}
                         id={index}
+                        deleteNote={deleteNote}
                         {...submittedInput[index]}
                     />
             )}

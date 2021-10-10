@@ -1,3 +1,5 @@
+// These notes are not being used anymore, because now notes are manually added.
+
 const notes = [
     {
       key: 1,
