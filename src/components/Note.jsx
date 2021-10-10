@@ -1,4 +1,10 @@
 import React from 'react';
+// Documentation suggests
+// import DeleteIcon from '@mui/icons-material/Delete';
+// Do not use @mui/icons-material
+// Instead, use @material-ui/icons/
+// as a path.
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Note = (props) => {
     return(
@@ -12,7 +18,7 @@ const Note = (props) => {
                         onClick={() => {
                             props.deleteNote(props.id);
                         }}
-                    >Delete</button>
+                    ><DeleteIcon /></button>
             </div>
         </section>
     );

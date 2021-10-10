@@ -13,7 +13,7 @@ const App = () => {
     const handleClick = (inputData) => {
 
         setSubmittedInput([
-            ...submittedInput,
+            ...submittedInput, 
             inputData
         ]);
     }
