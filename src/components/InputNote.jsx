@@ -1,4 +1,13 @@
 import React, { useState } from 'react';
+// Documentation suggests
+// import DeleteIcon from '@mui/icons-material/Delete';
+// Do not use @mui/icons-material/Delete
+// Instead, use @material-ui/icons/Delete
+// as a path.
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
 
 const InputNote = (props) => {
 
@@ -45,7 +54,9 @@ const InputNote = (props) => {
                     value={inputData.textAreaText}
                 />
                 <div className="btn-container">
-                    <button type="submit">Submit Note</button>
+                     <Zoom className="fab-btn" in={true}>
+                        <Fab type="submit"><AddCircleIcon /></Fab>
+                    </Zoom>
                 </div>
                 
             </form>

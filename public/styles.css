@@ -152,3 +152,8 @@ button:hover:before,button:hover:after {
 .delete-btn:before, .delete-btn:after {
   background: #ab1f1a;
 }
+
+.fab-btn {
+  position: absolute;
+  left: 85%;
+}

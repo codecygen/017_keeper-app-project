@@ -1,8 +1,8 @@
 import React from 'react';
 // Documentation suggests
 // import DeleteIcon from '@mui/icons-material/Delete';
-// Do not use @mui/icons-material
-// Instead, use @material-ui/icons/
+// Do not use @mui/icons-material/Delete
+// Instead, use @material-ui/icons/Delete
 // as a path.
 import DeleteIcon from '@material-ui/icons/Delete';
 
